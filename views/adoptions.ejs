@@ -1,25 +1,31 @@
 <!DOCTYPE html>
-
 <html>
-
 <head>
-
     <title>Adoptions</title>
-
 </head>
-
 <body>
-
-    <h1>The pets adoption confrimation page</h1>
-
-    <p><%= details.pet_type %></p>
-
-        <p><%= details.quantity %></p>
-
-        <p><%= details.color %></p>
-
-
+    <h1>Pet Adoptions</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Pet Type</th>
+                <th>Quantity</th>
+                <th>Color</th>
+                <th>Date Submitted</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% adoptions.forEach(adoption => { %>
+                <tr>
+                    <td><%= adoption.id %></td>
+                    <td><%= adoption.pet_type %></td>
+                    <td><%= adoption.quantity %></td>
+                    <td><%= adoption.color %></td>
+                    <td><%= adoption.data_submitted %></td>
+                </tr>
+            <% }); %>
+        </tbody>
+    </table>
 </body>
-
 </html>
-
